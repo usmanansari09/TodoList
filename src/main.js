@@ -1,5 +1,9 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import  './assets/style.css';
+import  '../src/tailwind.css';
+import './index.css'
+const app = createApp(App);
 
-createApp(App).mount('#app')
+app.component('my-todo-app', App);
+
+app.mount('#app');
